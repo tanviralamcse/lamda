@@ -2,7 +2,6 @@
 
 # Use the official Selenium base image
 image:
-  name: selenium/standalone-chrome:latest
   file: .gitpod.Dockerfile
 
 # Expose the necessary ports
@@ -29,4 +28,3 @@ tasks:
 
 # Specify the openMode to control how Gitpod opens the preview and VS Code.
 openMode: port
-
