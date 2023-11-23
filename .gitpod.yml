@@ -1,1 +1,32 @@
+# .gitpod.yml
+
+# Use the official Selenium base image
+image:
+  name: selenium/standalone-chrome:latest
+  file: .gitpod.Dockerfile
+
+# Expose the necessary ports
+ports:
+  - port: 6080
+    onOpen: ignore
+
+# Commands to run on startup
+tasks:
+  - init: echo "Configuring environment..."
+    command: |
+      # Add your environment setup commands here
+      pip install -r requirements.txt
+      # Start Selenium Grid (replace with your specific command)
+      docker run -d -p 4444:4444 --name selenium-hub selenium/hub:3.141.59
+
+  - openInBrowser: http://localhost:4444/grid/console
+    command: echo "Opening Selenium Grid console..."
+
+  - init: echo "Running tests..."
+    command: |
+      # Replace with your test execution command
+      pytest -v your_test_file.py
+
+# Specify the openMode to control how Gitpod opens the preview and VS Code.
+openMode: port
 
