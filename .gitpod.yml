@@ -43,10 +43,4 @@ tasks:
       # Run the tests
       pytest main.py
 
-# Specify the ports to expose (if needed)
-ports:
-  - port: 4444
-    onOpen: ignore
-  - port: 5901
-    onOpen: ignore
 
