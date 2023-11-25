@@ -1,43 +1,43 @@
-tasks:
-  - name: Setup
-    command: ./setup.sh
+# tasks:
+#   - name: Setup
+#     command: ./setup.sh
 
-  # - name: Run Tests
-  #   command: ./run_tests.sh
+#   # - name: Run Tests
+#   #   command: ./run_tests.sh
 
-# # .gitpod.yaml
+# # # .gitpod.yaml
 
 # Define the Docker image for Gitpod
 # image:
 #   file: .gitpod.Dockerfile
 
 # # List of tasks to be executed on startup
-# tasks:
-#   - init: |
-#       # Install necessary dependencies
-#       # Update package list
-#       sudo apt-get update
+ tasks:
+   - init: |
+       # Install necessary dependencies
+       # Update package list
+        sudo apt-get update
       
-#       # Install Python 3
-#       sudo apt-get install -y python3
+       # Install Python 3
+       sudo apt-get install -y python3
       
-#       # Install pip (Python package installer)
-#       sudo apt-get install -y python3-pip
+       # Install pip (Python package installer)
+       sudo apt-get install -y python3-pip
       
-#       # Install Selenium dependencies
-#       pip3 install selenium
+       # Install Selenium dependencies
+       pip3 install selenium
       
-#       # Install pytest for running tests
-#       pip3 install pytest
+      # Install pytest for running tests
+       pip3 install pytest
       
-#       # Install ChromeDriver and MS EdgeDriver (Adjust versions as needed)
-#       wget -q -O /usr/local/bin/chromedriver https://chromedriver.storage.googleapis.com/94.0.4606.41/chromedriver_linux64.zip
-#       unzip /usr/local/bin/chromedriver -d /usr/local/bin/
-#       chmod +x /usr/local/bin/chromedriver
+      # Install ChromeDriver and MS EdgeDriver (Adjust versions as needed)
+       wget -q -O /usr/local/bin/chromedriver https://chromedriver.storage.googleapis.com/94.0.4606.41/chromedriver_linux64.zip
+       unzip /usr/local/bin/chromedriver -d /usr/local/bin/
+       chmod +x /usr/local/bin/chromedriver
 
-#       wget -q -O /usr/local/bin/msedgedriver https://msedgedriver.azureedge.net/94.0.992.47/edgedriver_linux64.zip
-#       unzip /usr/local/bin/msedgedriver -d /usr/local/bin/
-#       chmod +x /usr/local/bin/msedgedriver
+      wget -q -O /usr/local/bin/msedgedriver https://msedgedriver.azureedge.net/94.0.992.47/edgedriver_linux64.zip
+      unzip /usr/local/bin/msedgedriver -d /usr/local/bin/
+      chmod +x /usr/local/bin/msedgedriver
 
   - command: |
       # Run the tests
