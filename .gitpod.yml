@@ -8,8 +8,8 @@
 # # .gitpod.yaml
 
 # Define the Docker image for Gitpod
-# image:
-#   file: .gitpod.Dockerfile
+image:
+  file: .gitpod.Dockerfile
 
 # List of tasks to be executed on startup
 tasks:
